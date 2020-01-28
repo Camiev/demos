@@ -1,0 +1,17 @@
+{
+  "name": "25012020",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docker:build": "docker build -t 25012020 .",
+    "docker:run": "docker run --rm -it -p 3000:3000 25012020"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
