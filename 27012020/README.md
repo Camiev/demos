@@ -1,4 +1,4 @@
-# 27 01 2020 -> Nros primos con Typescript
+# 27 01 2020: Nros primos con Typescript
 
 Los números primos son aquellos números que además de ser divisibles por ellos mismos y la unidad, también son divisibles por otros números. 
 
