@@ -1,11 +1,11 @@
 # Demos
 
-### [28 01 2020](20200128): Leyendo archivo cvs desde Python con Panda
+### [2020-02-18](20200218): Ejercicio Back y Front
 
-### [27 01 2020](20200127): Nros primos con Typescript
+### [2020-01-29](20200129): Términos
 
-### [25 01 2020](20200125): Dockerizando api básica
+### [2020-01-28](20200128): Leyendo archivo cvs desde Python con Panda
 
-### [29 01 2020](20200129): Términos
+### [2020-01-27](20200127): Nros primos con Typescript
 
-### [03 02 2020](20200203): Ejercicio Back y Front, con redis y docker.
+### [2020-01-25](20200125): Dockerizando api básica

@@ -8,6 +8,4 @@ RUN npm install
 
 ADD app ./app
 
-RUN ls
-
 CMD ["npm", "run", "start"]

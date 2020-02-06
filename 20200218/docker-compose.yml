@@ -1,0 +1,14 @@
+version: "3"
+services:
+  back:
+    build: ./back
+    ports:
+      - "3001:3001"
+    depends_on:
+      - redis
+    command: npm run start:dev
+  redis:
+    image: "redis:alpine"
+    container_name: cache
+    expose:
+      - 6379

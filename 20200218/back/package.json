@@ -1,7 +1,7 @@
 {
   "name": "back",
   "version": "1.0.0",
-  "description": "",
+  "description": "Back for exercice",
   "main": "index.js",
   "scripts": {
     "start": "node app/index",
@@ -9,17 +9,26 @@
     "docker:build": "docker build -t back:latest .",
     "docker:dev": "docker run  -p 3000:3000 back:latest npm run start:dev",
     "docker:start": "docker run -p 3000:3000 back:latest",
-    "test": "jest"
+    "test": "jest --runInBand",
+    "coverage": "jest --runInBand --coverage true"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@hapi/joi": "^17.1.0",
     "@koa/router": "^8.0.6",
+    "async-redis": "^1.1.7",
     "axios": "^0.19.2",
+    "bcrypt": "^3.0.8",
+    "bluebird": "^3.7.2",
     "dotenv": "^8.2.0",
+    "http-status-codes": "^1.4.0",
+    "jsonwebtoken": "^8.5.1",
     "koa": "^2.11.0",
-    "koa-body": "^4.1.1"
+    "koa-body": "^4.1.1",
+    "redis": "^3.0.2",
+    "winston": "^3.2.1"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
@@ -27,6 +36,8 @@
     "eslint-plugin-import": "^2.20.1",
     "jest": "^25.1.0",
     "nodemon": "^2.0.2",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "redis-mock": "^0.48.0",
+    "supertest": "^4.0.2"
   }
 }

@@ -1,10 +1,12 @@
 const axios = require("axios");
+const config = require("../utils/config");
+const HttpStatus = require("http-status-codes");
 
 const RickAndMortyMiddleware = async (ctx, next) => {
-  const { RICK_AND_MORTY_API_URL } = process.env;
+  const { RICK_AND_MORTY_API_URL } = config;
   try {
     const response = await axios.get(RICK_AND_MORTY_API_URL);
-    ctx.body = response.data.results.map(character => {
+    const characters = response.data.results.map(character => {
       const { name, status, species, gender, image } = character;
       return {
         name,
@@ -14,9 +16,9 @@ const RickAndMortyMiddleware = async (ctx, next) => {
         image
       };
     });
-  } catch (error) {
-    const err = new Error("Internal Server Error");
-    throw err;
+    ctx.body = characters;
+  } catch (err) {
+    ctx.throw(HttpStatus.BAD_GATEWAY, "Can't get characters");
   }
 };
 
