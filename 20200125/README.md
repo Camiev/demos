@@ -11,6 +11,3 @@ Se debe tener Docker instalado previamente
 
 > npm run docker:run
 ```
-
-
-

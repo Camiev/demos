@@ -1,0 +1,32 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app/index",
+    "start:dev": "nodemon -r dotenv/config app/index",
+    "docker:build": "docker build -t back:latest .",
+    "docker:dev": "docker run  -p 3000:3000 back:latest npm run start:dev",
+    "docker:start": "docker run -p 3000:3000 back:latest",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/router": "^8.0.6",
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "koa": "^2.11.0",
+    "koa-body": "^4.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1"
+  }
+}
