@@ -13,12 +13,13 @@ const tokenvalidateMiddleware = async (ctx, next) => {
     ctx.throw(HttpStatus.UNAUTHORIZED, "Invalid format");
   }
 
-  const token = authorization.replace("Bearer ", "");
-  const decoded = jwt.verify(token, config.JWT_SECRET);
-  if (!decoded) {
+  try {
+    const token = authorization.replace("Bearer ", "");
+    const decoded = jwt.verify(token, config.JWT_SECRET);
+    ctx.state.decoded = decoded;
+  } catch (err) {
     ctx.throw(HttpStatus.UNAUTHORIZED, "Invalid token");
   }
-
   await next();
 };
 

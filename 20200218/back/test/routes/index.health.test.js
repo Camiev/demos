@@ -12,7 +12,7 @@ describe("Health", () => {
     app.close();
   });
 
-  test("Healthcheck should return I'm Ok!", async done => {
+  test("Should return I'm Ok!", async done => {
     const response = await supertest(app).get("/health");
 
     expect(response.status).toBe(200);
