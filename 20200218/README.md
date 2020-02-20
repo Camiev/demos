@@ -184,10 +184,10 @@ Usando docker compose podemos levantar todos los artefactos
 
 ## ToDo:
 
-- Back: Improve handle error: To log internal error and show less information in all cases.
+- Improve handle error: To log internal error and show less information in all cases.
 - Improve logs: To ofuscate tokens, password and sensitive data in logs.
 - Improve how to send password: encrypt password in front and recieve encryted in back
 - Improve docker image: use alpine nodejs?
-- Improve test
+- Improve test. Add errors in axios, add more errors in redis. Current: 97.53% Statements (158/162) 87.5% Branches (28/32) 95.24% Functions (20/21 )97.53% Lines (158/162)
 - Don't write in english AND spanish 'n.n
 - Front! ToDo the Front
